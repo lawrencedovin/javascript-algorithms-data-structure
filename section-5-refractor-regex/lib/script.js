@@ -48,6 +48,10 @@
 
 // console.log(charCount("Lawrence"))
 
+//charCount string if found object[char]++ else object[char] = 1;
+//returns the list of object with it's values
+//has to be alphanumeric and lowercase
+
 function isAlphaNumeric(char){
     var code = char.charCodeAt(0);
     if(!(code > 47 && code < 58) && // numeric (0-9)
