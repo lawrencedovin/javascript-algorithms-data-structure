@@ -1,3 +1,4 @@
+
 function maxSubarraySum(arr, num) {
     let max = 0;
     let temp = 0;
@@ -11,6 +12,7 @@ function maxSubarraySum(arr, num) {
     temp = max;
     for(let i = num; i < arr.length; i++) {
        temp = temp - arr[i - num] + arr[i]
+       // Subtracts 1st element and adds new element
        max = Math.max(max, temp);
     }
 
