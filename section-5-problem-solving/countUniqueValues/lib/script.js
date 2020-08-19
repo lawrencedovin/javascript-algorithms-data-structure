@@ -1,26 +1,42 @@
-function countUniqueValues(arr){
-    let i = 0;
-    let j = 0;
+numbers = [];
 
-    for(j = 0; j < arr.length; j++) {
-        if(arr[i] != arr[j]){
-            i++;
-            arr[i]=arr[j];
-        } 
-
-        // if(arr[i] == arr[j]) {
-        //     j++;
-        // } else {
-        //     i++;
-        //     arr[i] = arr[j];
-        //     j++;
-        // }
-        
-        // Incorrect because j iterates no matter what until the arr.length
+function calculateAverage(numbers) {
+    // Write your code here
+    let total = 0;
+    
+    for(let i = 0; i < numbers.length; i++){
+        total += numbers[i];
     }
     
-    return i+1;
-    // i+1 because i starts at 0;
+    return numbers.length != 0 ? total / numbers.length : 0;
+
 }
 
-console.log(countUniqueValues([1,1,1,2,3,3,4,4,5,6]));
+console.log(calculateAverage(numbers));
+
+// function countUniqueValues(arr){
+//     let i = 0;
+//     let j = 0;
+//     let tempArr = []
+
+//     arr.sort();
+
+//     for(j = 0; j < arr.length; j++) {
+//         if(arr[i] != arr[j]){
+//             tempArr.push(arr[i]);
+//             i++;
+//             arr[i]=arr[j];
+//         } 
+//     }
+
+//     tempArr.push(arr[arr.length-1]);
+    
+//     return tempArr;
+// }
+
+// console.log(countUniqueValues([1,1,1,2,6,4,2,3]));
+
+// function dedupe(numbers) {
+//     let x = (numbers) => numbers.filter((v,i) => numbers.indexOf(v) === i)
+//     return x(numbers);
+// }

@@ -1,22 +1,22 @@
-function same(arr1, arr2){
-    if(arr1.length !== arr2.length){
-        return false;
-    }
-    for(let i = 0; i < arr1.length; i++) {
-        let correctIndex = arr2.indexOf(arr1[i] ** 2);
-        // we pass in the square of each value from arr1 to check if it exists in arr2
-        // what is the index of 1^2 in arr2
-        if(correctIndex === -1) {
-            return false;
-            //if doesn't exist in arr2 then return false
-        }
-        arr2.splice(correctIndex, 1);
-        // removes the array2 element that matched with array1
-        // shrinks arr2
-    }
-    return true;
-    // since we never returned false we returned true
-}
+// function same(arr1, arr2){
+//     if(arr1.length !== arr2.length){
+//         return false;
+//     }
+//     for(let i = 0; i < arr1.length; i++) {
+//         let correctIndex = arr2.indexOf(arr1[i] ** 2);
+//         // we pass in the square of each value from arr1 to check if it exists in arr2
+//         // what is the index of 1^2 in arr2
+//         if(correctIndex === -1) {
+//             return false;
+//             //if doesn't exist in arr2 then return false
+//         }
+//         arr2.splice(correctIndex, 1);
+//         // removes the array2 element that matched with array1
+//         // shrinks arr2
+//     }
+//     return true;
+//     // since we never returned false we returned true
+// }
 
 function sameRefractored(arr1, arr2) {
     if(arr1.length !== arr2.length) {

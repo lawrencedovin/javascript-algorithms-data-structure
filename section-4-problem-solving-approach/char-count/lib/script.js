@@ -14,7 +14,7 @@ function charCount(str) {
         }
         //if char is something else (space, period, etc.) don't do anything
     }
-    // return object at end
+
     return result;
 }
 
