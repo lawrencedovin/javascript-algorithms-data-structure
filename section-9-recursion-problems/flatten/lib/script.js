@@ -2,9 +2,12 @@ function flatten(oldArr){
   var newArr = []
   	for(var i = 0; i < oldArr.length; i++){
     	if(Array.isArray(oldArr[i])){
+          // If an array is at an array index
       		newArr = newArr.concat(flatten(oldArr[i]))
     	} else {
-      		newArr.push(oldArr[i])
+          newArr.push(oldArr[i])
+          // If no longer an array push old array
+          // element to new array
     	}
   } 
   return newArr;
