@@ -34,7 +34,8 @@ function binarySearch(arr, value) {
   let middle = Math.floor((left + right) / 2);
 
   // increments our left to out of bounds which is higher of an index
-  // than right left <= right prevents this infinite loop
+  // than right if value not found in array.  
+  // left <= right prevents this infinite loop
   while (arr[middle] !== value && left <= right) {
     // if value is smaller than middle, move the right pointer down
     if (value < arr[middle]) right = middle - 1;
