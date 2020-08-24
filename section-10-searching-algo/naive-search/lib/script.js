@@ -1,6 +1,7 @@
 function naiveSearch(long, short) {
   let count = 0;
   for(let i = 0; i < long.length; i++) {
+    // starts as 0 but if inner loop breaks i++
     for(let j = 0; j < short.length; j++) {
       if(short[j] !== long[i+j]){
         console.log("No character match breaking inner loop") 
